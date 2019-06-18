@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b2ce7b11418a44168434592dd652291d" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="GSSCC360_devModel.Club" Width="1.5" PointX="10.875" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.database_firewall_rules" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Document" Width="1.5" PointX="4.125" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Dog" Width="1.5" PointX="5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Event" Width="1.5" PointX="13.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Events_TrialEvent" Width="1.5" PointX="13.375" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.lutBreed" Width="1.5" PointX="5.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Notification" Width="1.5" PointX="16.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Person" Width="1.5" PointX="8" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Member" Width="1.5" PointX="8" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.TrialEntry" Width="1.5" PointX="10.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_ClubNotification" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_ClubTrialEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_DogDocument" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="GSSCC360_devModel.FK_NotificationDocument">
+        </AssociationConnector>
+        <AssociationConnector Association="GSSCC360_devModel.FK_DogDog" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_DogDog1" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_DoglutBreed" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_DogNotification" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEntryDog" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEvent_inherits_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEventNotification" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEventTrialEntry" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="GSSCC360_devModel.FK_PersonNotification" ManuallyRouted="false" />
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEntryNotification" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="GSSCC360_devModel.FK_TrialEntryMember" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GSSCC360_devModel.Region" PointX="10.875" PointY="1.75" Width="1.5" />
+        <AssociationConnector Association="GSSCC360_devModel.MemberDog" />
+        <AssociationConnector Association="GSSCC360_devModel.RegionClub" />
+        <AssociationConnector Association="GSSCC360_devModel.ClubMember" />
+        <AssociationConnector Association="GSSCC360_devModel.MemberPerson" />
+        <AssociationConnector Association="GSSCC360_devModel.ClubPresident" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

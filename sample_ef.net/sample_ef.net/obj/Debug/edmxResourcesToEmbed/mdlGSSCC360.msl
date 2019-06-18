@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mdlGSSCC360StoreContainer" CdmEntityContainer="mdlGSSCC360Container">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Member)">
+        <MappingFragment StoreEntitySet="People_Member">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMember" ColumnName="IdMember" />
+          <ScalarProperty Name="GSSCCNumber" ColumnName="GSSCCNumber" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Club)">
+        <MappingFragment StoreEntitySet="Clubs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dogs">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Dog)">
+        <MappingFragment StoreEntitySet="Dogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lutBreeds">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.lutBreed)">
+        <MappingFragment StoreEntitySet="lutBreeds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Event)">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.TrialEvent)">
+        <MappingFragment StoreEntitySet="Events_TrialEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTrialEvent" ColumnName="IdTrialEvent" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrialEntries">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.TrialEntry)">
+        <MappingFragment StoreEntitySet="TrialEntries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScoreA" ColumnName="ScoreA" />
+          <ScalarProperty Name="ScoreB" ColumnName="ScoreB" />
+          <ScalarProperty Name="TrialEventId" ColumnName="TrialEventId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Document)">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="IsTypeOf(mdlGSSCC360.Notification)">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ClubMember" TypeName="mdlGSSCC360.ClubMember" StoreEntitySet="ClubMember">
+      <EndProperty Name="Club">
+        <ScalarProperty Name="Id" ColumnName="Clubs_Id" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Members_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DoglutBreed" TypeName="mdlGSSCC360.DoglutBreed" StoreEntitySet="Dogs">
+      <EndProperty Name="lutBreed">
+        <ScalarProperty Name="Id" ColumnName="Breed_Id" />
+      </EndProperty>
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DogSire" TypeName="mdlGSSCC360.DogDog" StoreEntitySet="Dogs">
+      <EndProperty Name="Dog1">
+        <ScalarProperty Name="Id" ColumnName="Sire_Id" />
+      </EndProperty>
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DogDam" TypeName="mdlGSSCC360.DogDog1" StoreEntitySet="Dogs">
+      <EndProperty Name="Dog1">
+        <ScalarProperty Name="Id" ColumnName="Dam_Id" />
+      </EndProperty>
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DogMember" TypeName="mdlGSSCC360.DogMember" StoreEntitySet="Dogs">
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Member_Id" />
+      </EndProperty>
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClubTrialEvent" TypeName="mdlGSSCC360.ClubTrialEvent" StoreEntitySet="Events_TrialEvent">
+      <EndProperty Name="Club">
+        <ScalarProperty Name="Id" ColumnName="HostedBy_Id" />
+      </EndProperty>
+      <EndProperty Name="TrialEvent">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TrialEntryDog" TypeName="mdlGSSCC360.TrialEntryDog" StoreEntitySet="TrialEntries">
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Dog_Id" />
+      </EndProperty>
+      <EndProperty Name="TrialEntry">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TrialEntryMember" TypeName="mdlGSSCC360.TrialEntryMember" StoreEntitySet="TrialEntries">
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Handler_Id" />
+      </EndProperty>
+      <EndProperty Name="TrialEntry">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DogDocument" TypeName="mdlGSSCC360.DogDocument" StoreEntitySet="Dogs">
+      <EndProperty Name="Document">
+        <ScalarProperty Name="Id" ColumnName="Pedigree_Id" />
+      </EndProperty>
+      <EndProperty Name="Dog">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="NotificationDocument" TypeName="mdlGSSCC360.NotificationDocument" StoreEntitySet="Documents">
+      <EndProperty Name="Notification">
+        <ScalarProperty Name="Id" ColumnName="NotificationDocument_Document_Id" />
+      </EndProperty>
+      <EndProperty Name="Document">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="NotificationDocument_Document_Id" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Breed Name="Giant Schnauzer" Acronym="GSD" />
+  <Breed Name="German Shepherd" Acronym="GS" />
+</Root>

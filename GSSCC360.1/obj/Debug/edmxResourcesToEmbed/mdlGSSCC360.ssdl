@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GSSCC360_devModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GSSCC360_devModelStoreContainer">
+    <EntitySet Name="Clubs" EntityType="GSSCC360_devModel.Store.Clubs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="database_firewall_rules" EntityType="GSSCC360_devModel.Store.database_firewall_rules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Documents" EntityType="GSSCC360_devModel.Store.Documents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dogs" EntityType="GSSCC360_devModel.Store.Dogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events" EntityType="GSSCC360_devModel.Store.Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events_TrialEvent" EntityType="GSSCC360_devModel.Store.Events_TrialEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lutBreeds" EntityType="GSSCC360_devModel.Store.lutBreeds" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notifications" EntityType="GSSCC360_devModel.Store.Notifications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="People" EntityType="GSSCC360_devModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Members" EntityType="GSSCC360_devModel.Store.Members" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TrialEntries" EntityType="GSSCC360_devModel.Store.TrialEntries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Regions" EntityType="GSSCC360_devModel.Store.Regions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClubMember" EntityType="GSSCC360_devModel.Store.ClubMember" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ClubNotification" Association="GSSCC360_devModel.Store.FK_ClubNotification">
+      <End Role="Clubs" EntitySet="Clubs" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClubTrialEvent" Association="GSSCC360_devModel.Store.FK_ClubTrialEvent">
+      <End Role="Clubs" EntitySet="Clubs" />
+      <End Role="Events_TrialEvent" EntitySet="Events_TrialEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DogDocument" Association="GSSCC360_devModel.Store.FK_DogDocument">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="Dogs" EntitySet="Dogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationDocument" Association="GSSCC360_devModel.Store.FK_NotificationDocument">
+      <End Role="Notifications" EntitySet="Notifications" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DogDog" Association="GSSCC360_devModel.Store.FK_DogDog">
+      <End Role="Dogs" EntitySet="Dogs" />
+      <End Role="Dogs1" EntitySet="Dogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DogDog1" Association="GSSCC360_devModel.Store.FK_DogDog1">
+      <End Role="Dogs" EntitySet="Dogs" />
+      <End Role="Dogs1" EntitySet="Dogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoglutBreed" Association="GSSCC360_devModel.Store.FK_DoglutBreed">
+      <End Role="lutBreeds" EntitySet="lutBreeds" />
+      <End Role="Dogs" EntitySet="Dogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DogNotification" Association="GSSCC360_devModel.Store.FK_DogNotification">
+      <End Role="Dogs" EntitySet="Dogs" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEntryDog" Association="GSSCC360_devModel.Store.FK_TrialEntryDog">
+      <End Role="Dogs" EntitySet="Dogs" />
+      <End Role="TrialEntries" EntitySet="TrialEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEvent_inherits_Event" Association="GSSCC360_devModel.Store.FK_TrialEvent_inherits_Event">
+      <End Role="Events" EntitySet="Events" />
+      <End Role="Events_TrialEvent" EntitySet="Events_TrialEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEventNotification" Association="GSSCC360_devModel.Store.FK_TrialEventNotification">
+      <End Role="Events_TrialEvent" EntitySet="Events_TrialEvent" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEventTrialEntry" Association="GSSCC360_devModel.Store.FK_TrialEventTrialEntry">
+      <End Role="Events_TrialEvent" EntitySet="Events_TrialEvent" />
+      <End Role="TrialEntries" EntitySet="TrialEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonNotification" Association="GSSCC360_devModel.Store.FK_PersonNotification">
+      <End Role="People" EntitySet="People" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEntryNotification" Association="GSSCC360_devModel.Store.FK_TrialEntryNotification">
+      <End Role="TrialEntries" EntitySet="TrialEntries" />
+      <End Role="Notifications" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrialEntryMember" Association="GSSCC360_devModel.Store.FK_TrialEntryMember">
+      <End Role="People_Member" EntitySet="Members" />
+      <End Role="TrialEntries" EntitySet="TrialEntries" />
+    </AssociationSet>
+    <AssociationSet Name="MemberDog" Association="GSSCC360_devModel.Store.MemberDog">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Dog" EntitySet="Dogs" />
+    </AssociationSet>
+    <AssociationSet Name="RegionClub" Association="GSSCC360_devModel.Store.RegionClub">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Club" EntitySet="Clubs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClubMember_Club" Association="GSSCC360_devModel.Store.FK_ClubMember_Club">
+      <End Role="Club" EntitySet="Clubs" />
+      <End Role="ClubMember" EntitySet="ClubMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClubMember_Member" Association="GSSCC360_devModel.Store.FK_ClubMember_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="ClubMember" EntitySet="ClubMember" />
+    </AssociationSet>
+    <AssociationSet Name="MemberPerson" Association="GSSCC360_devModel.Store.MemberPerson">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="ClubPresident" Association="GSSCC360_devModel.Store.ClubPresident">
+      <End Role="Club" EntitySet="Clubs" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Clubs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State" Type="smallint" Nullable="false" />
+    <Property Name="RegionId" Type="int" Nullable="false" />
+    <Property Name="President_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="start_ip_address" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="end_ip_address" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NotificationDocument_Document_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Dogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="smallint" Nullable="true" />
+    <Property Name="Breed_Id" Type="int" Nullable="false" />
+    <Property Name="Sire_Id" Type="int" Nullable="false" />
+    <Property Name="Dam_Id" Type="int" Nullable="false" />
+    <Property Name="Pedigree_Id" Type="int" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateStart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateEnd" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events_TrialEvent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="IdTrialEvent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="HostedBy_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lutBreeds">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Acronym" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Club_Id" Type="int" Nullable="true" />
+    <Property Name="TrialEntry_Id" Type="int" Nullable="true" />
+    <Property Name="TrialEvent_Id" Type="int" Nullable="true" />
+    <Property Name="Dog_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMail" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address2" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Province" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Country" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="GSSCCNumber" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="State" Type="smallint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Person_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrialEntries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScoreA" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ScoreB" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TrialEventId" Type="int" Nullable="false" />
+    <Property Name="State" Type="smallint" Nullable="false" />
+    <Property Name="Dog_Id" Type="int" Nullable="false" />
+    <Property Name="Handler_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClubMember">
+    <Key>
+      <PropertyRef Name="Clubs_Id" />
+      <PropertyRef Name="Members_Id" />
+    </Key>
+    <Property Name="Clubs_Id" Type="int" Nullable="false" />
+    <Property Name="Members_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ClubNotification">
+    <End Role="Clubs" Type="GSSCC360_devModel.Store.Clubs" Multiplicity="0..1" />
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clubs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="Club_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClubTrialEvent">
+    <End Role="Clubs" Type="GSSCC360_devModel.Store.Clubs" Multiplicity="1" />
+    <End Role="Events_TrialEvent" Type="GSSCC360_devModel.Store.Events_TrialEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clubs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Events_TrialEvent">
+        <PropertyRef Name="HostedBy_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DogDocument">
+    <End Role="Documents" Type="GSSCC360_devModel.Store.Documents" Multiplicity="1" />
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dogs">
+        <PropertyRef Name="Pedigree_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationDocument">
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="0..1" />
+    <End Role="Documents" Type="GSSCC360_devModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notifications">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="NotificationDocument_Document_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DogDog">
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="1" />
+    <End Role="Dogs1" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dogs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dogs1">
+        <PropertyRef Name="Sire_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DogDog1">
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="1" />
+    <End Role="Dogs1" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dogs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dogs1">
+        <PropertyRef Name="Dam_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoglutBreed">
+    <End Role="lutBreeds" Type="GSSCC360_devModel.Store.lutBreeds" Multiplicity="1" />
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="lutBreeds">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dogs">
+        <PropertyRef Name="Breed_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DogNotification">
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="0..1" />
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dogs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="Dog_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEntryDog">
+    <End Role="Dogs" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="1" />
+    <End Role="TrialEntries" Type="GSSCC360_devModel.Store.TrialEntries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dogs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrialEntries">
+        <PropertyRef Name="Dog_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEvent_inherits_Event">
+    <End Role="Events" Type="GSSCC360_devModel.Store.Events" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Events_TrialEvent" Type="GSSCC360_devModel.Store.Events_TrialEvent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Events">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Events_TrialEvent">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEventNotification">
+    <End Role="Events_TrialEvent" Type="GSSCC360_devModel.Store.Events_TrialEvent" Multiplicity="0..1" />
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Events_TrialEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="TrialEvent_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEventTrialEntry">
+    <End Role="Events_TrialEvent" Type="GSSCC360_devModel.Store.Events_TrialEvent" Multiplicity="1" />
+    <End Role="TrialEntries" Type="GSSCC360_devModel.Store.TrialEntries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Events_TrialEvent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrialEntries">
+        <PropertyRef Name="TrialEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonNotification">
+    <End Role="People" Type="GSSCC360_devModel.Store.People" Multiplicity="1" />
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEntryNotification">
+    <End Role="TrialEntries" Type="GSSCC360_devModel.Store.TrialEntries" Multiplicity="0..1" />
+    <End Role="Notifications" Type="GSSCC360_devModel.Store.Notifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrialEntries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Notifications">
+        <PropertyRef Name="TrialEntry_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrialEntryMember">
+    <End Role="People_Member" Type="GSSCC360_devModel.Store.Members" Multiplicity="1" />
+    <End Role="TrialEntries" Type="GSSCC360_devModel.Store.TrialEntries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People_Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrialEntries">
+        <PropertyRef Name="Handler_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MemberDog">
+    <End Role="Member" Type="GSSCC360_devModel.Store.Members" Multiplicity="0..1" />
+    <End Role="Dog" Type="GSSCC360_devModel.Store.Dogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dog">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RegionClub">
+    <End Role="Region" Type="GSSCC360_devModel.Store.Regions" Multiplicity="1" />
+    <End Role="Club" Type="GSSCC360_devModel.Store.Clubs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Club">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MemberPerson">
+    <End Role="Member" Type="GSSCC360_devModel.Store.Members" Multiplicity="*" />
+    <End Role="Person" Type="GSSCC360_devModel.Store.People" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="Person_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClubPresident">
+    <End Role="Club" Type="GSSCC360_devModel.Store.Clubs" Multiplicity="*" />
+    <End Role="Member" Type="GSSCC360_devModel.Store.Members" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Club">
+        <PropertyRef Name="President_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClubMember_Club">
+    <End Role="Club" Type="GSSCC360_devModel.Store.Clubs" Multiplicity="1" />
+    <End Role="ClubMember" Type="GSSCC360_devModel.Store.ClubMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Club">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClubMember">
+        <PropertyRef Name="Clubs_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClubMember_Member">
+    <End Role="ClubMember" Type="GSSCC360_devModel.Store.ClubMember" Multiplicity="*" />
+    <End Role="Member" Type="GSSCC360_devModel.Store.Members" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClubMember">
+        <PropertyRef Name="Members_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

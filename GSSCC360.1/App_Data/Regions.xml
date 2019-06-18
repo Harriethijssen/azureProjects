@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Region Id="1" Name="Western" />
+  <Region Id="2" Name="Prairies" />
+  <Region Id="3" Name="Ontario" />
+  <Region Id="4" Name="Quebec" />
+  <Region Id="5" Name="Eastern" />
+</Root>

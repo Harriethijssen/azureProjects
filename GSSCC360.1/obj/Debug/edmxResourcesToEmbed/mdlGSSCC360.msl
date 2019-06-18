@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GSSCC360_devModelStoreContainer" CdmEntityContainer="GSSCC360_devEntities">
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Club)">
+        <MappingFragment StoreEntitySet="Clubs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="database_firewall_rules">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.database_firewall_rules)">
+        <MappingFragment StoreEntitySet="database_firewall_rules">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+          <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+          <ScalarProperty Name="create_date" ColumnName="create_date" />
+          <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Document)">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="NotificationDocument_Document_Id" ColumnName="NotificationDocument_Document_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dogs">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Dog)">
+        <MappingFragment StoreEntitySet="Dogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Breed_Id" ColumnName="Breed_Id" />
+          <ScalarProperty Name="Sire_Id" ColumnName="Sire_Id" />
+          <ScalarProperty Name="Dam_Id" ColumnName="Dam_Id" />
+          <ScalarProperty Name="Pedigree_Id" ColumnName="Pedigree_Id" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Event)">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events_TrialEvent">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Events_TrialEvent)">
+        <MappingFragment StoreEntitySet="Events_TrialEvent">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTrialEvent" ColumnName="IdTrialEvent" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="HostedBy_Id" ColumnName="HostedBy_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lutBreeds">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.lutBreed)">
+        <MappingFragment StoreEntitySet="lutBreeds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Notification)">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Club_Id" ColumnName="Club_Id" />
+          <ScalarProperty Name="TrialEntry_Id" ColumnName="TrialEntry_Id" />
+          <ScalarProperty Name="TrialEvent_Id" ColumnName="TrialEvent_Id" />
+          <ScalarProperty Name="Dog_Id" ColumnName="Dog_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Member)">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GSSCCNumber" ColumnName="GSSCCNumber" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrialEntries">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.TrialEntry)">
+        <MappingFragment StoreEntitySet="TrialEntries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScoreA" ColumnName="ScoreA" />
+          <ScalarProperty Name="ScoreB" ColumnName="ScoreB" />
+          <ScalarProperty Name="TrialEventId" ColumnName="TrialEventId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Dog_Id" ColumnName="Dog_Id" />
+          <ScalarProperty Name="Handler_Id" ColumnName="Handler_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="IsTypeOf(GSSCC360_devModel.Region)">
+        <MappingFragment StoreEntitySet="Regions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ClubMember" TypeName="GSSCC360_devModel.ClubMember" StoreEntitySet="ClubMember">
+      <EndProperty Name="Club">
+        <ScalarProperty Name="Id" ColumnName="Clubs_Id" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Members_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MemberPerson" TypeName="GSSCC360_devModel.MemberPerson" StoreEntitySet="Members">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Id" ColumnName="Person_Id" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClubPresident" TypeName="GSSCC360_devModel.ClubPresident" StoreEntitySet="Clubs">
+      <EndProperty Name="Member">
+        <ScalarProperty Name="Id" ColumnName="President_Id" />
+      </EndProperty>
+      <EndProperty Name="Club">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

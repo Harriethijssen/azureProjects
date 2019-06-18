@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f47ae4b51a0e4004b28cc2f450038558" Name="Diagram1" >
+        <EntityTypeShape EntityType="mdlGSSCC360.Person" Width="1.5" PointX="6.25" PointY="1.125" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Member" Width="1.5" PointX="6.25" PointY="5" />
+        <InheritanceConnector EntityType="mdlGSSCC360.Member" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Club" Width="1.5" PointX="9.125" PointY="5" />
+        <AssociationConnector Association="mdlGSSCC360.ClubMember" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Dog" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="mdlGSSCC360.lutBreed" Width="1.5" PointX="0.5" PointY="5" />
+        <AssociationConnector Association="mdlGSSCC360.DoglutBreed" />
+        <AssociationConnector Association="mdlGSSCC360.DogDog" />
+        <AssociationConnector Association="mdlGSSCC360.DogDog1" />
+        <AssociationConnector Association="mdlGSSCC360.DogMember" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Event" Width="1.5" PointX="9.125" PointY="10.25" />
+        <EntityTypeShape EntityType="mdlGSSCC360.TrialEvent" Width="1.5" PointX="9.125" PointY="7.75" />
+        <InheritanceConnector EntityType="mdlGSSCC360.TrialEvent" />
+        <AssociationConnector Association="mdlGSSCC360.ClubTrialEvent" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="mdlGSSCC360.TrialEntry" Width="1.5" PointX="6.25" PointY="7.75" />
+        <AssociationConnector Association="mdlGSSCC360.TrialEntryDog" />
+        <AssociationConnector Association="mdlGSSCC360.TrialEntryMember" />
+        <AssociationConnector Association="mdlGSSCC360.TrialEventTrialEntry" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Document" Width="1.5" PointX="3.125" PointY="9" />
+        <AssociationConnector Association="mdlGSSCC360.DogDocument" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Notification" Width="1.5" PointX="11.5" PointY="1.25" />
+        <AssociationConnector Association="mdlGSSCC360.PersonNotification" />
+        <AssociationConnector Association="mdlGSSCC360.ClubNotification" />
+        <AssociationConnector Association="mdlGSSCC360.NotificationTrialEntry" />
+        <EntityTypeShape EntityType="mdlGSSCC360.Region" Width="1.5" PointX="12.375" PointY="4.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
